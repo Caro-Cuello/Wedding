@@ -1,0 +1,436 @@
+body{
+    background-color: #dbe4ee;
+}
+
+.cookie-regular {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.raleway-uniquifier{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.container-date, .container-name {
+    font-family: "Cookie", cursive;
+  display: flex; 
+  justify-content: center;
+margin-top: 10px;
+  
+}
+.decorative-lines {
+  display: inline-block;
+  position: relative;
+  padding: 0 140px;
+  color: #054a91;
+}
+.decorative-lines::before,
+.decorative-lines::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 1px;
+  background: currentColor;
+  transform: translateY(-50%);
+}
+.decorative-lines::before { left: 0; }
+.decorative-lines::after  { right: 0; }
+
+
+.name{
+    color: #054a91;
+    
+}
+
+.name {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin-top: -25px;
+}
+
+.name::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 2px auto 0;
+background: currentColor;
+  transform: translateY(-50%);
+  border-radius: 3px;
+}
+
+.biblical-passage{
+   font-family: "Raleway", sans-serif;
+   font-size: 20px;
+}
+
+/* Reloj cuenta regresiva */
+
+.container-count {
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    
+    /* Ajustamos el padding para que el contenido no toque los bordes */
+    padding: 3rem 1rem; 
+    font-family: "Raleway", sans-serif;
+    
+    /* Limpiamos bordes y sombras duplicadas */
+    border-radius: 0; 
+    box-shadow: none; 
+}
+
+.circle-wrapper {
+    /* Define el tamaño del círculo (width y height deben ser iguales) */
+    width: 60vw;
+    height: 60vw;
+    max-width: 900px;  /* Limita el tamaño en pantallas grandes */
+    max-height: 900px;
+    
+    /* Convierte el contenedor en un círculo */
+    border-radius: 50%;
+    
+    /* Propiedades visuales del círculo */
+    background: #f0f0f0; /* Fondo del círculo */
+    border: 5px solid #054a91; /* Borde visible del círculo */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    
+    /* Centrar el círculo en la página */
+    margin: 50px auto; 
+    
+    /* Usar Flexbox para centrar el .container-count dentro del círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: var(#054a91);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Estilos del Reloj  */
+
+:root {
+    /* Tamaños de fuente predefinidos (en píxeles) */
+    --size-days: 38px;
+    --size-hours: 38px;
+    --size-minutes: 38px;
+    --size-seconds: 38px;
+
+    /* Colores solicitados */
+    --bg: #dbe4ee;
+    --fg: #054a91;
+    --card-bg: #ffffff; /* fondo de cada tarjeta */
+    --card-border: #cbd7e6;
+    --label-fg: #5c6b8c;
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+.countdown {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -35px;
+}
+
+/* Estilos de las Tarjetas  */
+.card {
+    background: #dbe4ee;
+    border: 1px solid var(--card-border);
+    border-radius: 50px;
+    padding: 0.6rem 0.8rem;
+    min-width: 80px;
+    text-align: center;
+    box-shadow: 0 2px 6px var(--shadow);
+}
+
+.card .value {
+    display: block;
+    color: var(--fg);
+    font-weight: 600;
+    font-size: var(--size-days);
+}
+
+.card .label {
+    display: block;
+    color: var(--label-fg);
+    font-size: 11px;
+    margin-top: 5px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+#days { font-size: var(--size-days); }
+#hours { font-size: var(--size-hours); }
+#minutes { font-size: var(--size-minutes); }
+#seconds { font-size: var(--size-seconds); }
+
+
+/* --- ESTILOS DEL CORAZÓN --- */
+.corazon {
+    
+    margin-top: 2rem; 
+    margin-bottom: 2rem; 
+    
+    animation: latido 1s infinite;
+    background-color:#054a91;
+    display: inline-block; /* Importante para que el margen funcione bien */
+    height: 24px;
+    transform: rotate(-45deg);
+    width: 24px;
+}
+
+.corazon:before,
+.corazon:after {
+    content: "";
+    background-color: #054a91;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    position: absolute; /* Estos sí necesitan position: absolute respecto a .corazon */
+}
+
+.corazon:before {
+    top: -12px;
+    left: 0;
+}
+
+.corazon:after {
+    left: 12px;
+    top: 0;
+}
+
+@keyframes latido {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    20% {
+        transform: scale(1.25) rotate(-45deg);
+    }
+    40% {
+        transform: scale(1.5) rotate(-45deg);
+    }
+    /* Añadimos un paso de regreso para un latido más natural */
+    60% {
+        transform: scale(1.25) rotate(-45deg);
+    }
+    80% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+    100% {
+        transform: scale(1) rotate(-45deg);
+    }
+}
+/* --- FIN ESTILOS DEL CORAZÓN AJUSTADOS --- */
+
+
+/* Opcional: ajustar responsive */
+@media (max-width: 600px) {
+    :root {
+        --size-days: 40px;
+        --size-hours: 34px;
+        --size-minutes: 28px;
+        --size-seconds: 24px;
+    }
+    
+    .days-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* GRUPO DE INVITADOS  */
+
+.grupo-de-invitados {
+    text-align: center; 
+    padding: 20px 0; 
+    margin: 0 auto; 
+
+}
+.pases-total{
+  width: 90px; 
+  height:90px;
+  border-radius: 50%; 
+
+    background-color: #054a91;
+    color: #dbe4ee;
+  
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    /* Estilo del texto */
+    font-size: 40px;
+    font-weight: bold;
+}
+.titulo-grupo{
+  font-family:"Raleway", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.lista-invitados {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto; 
+    width: 100%;
+    max-width: 350px; 
+    
+    /* Usamos Flexbox para centrar las cajas internamente si no ocupan todo el ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* 2. Estilo de Cada Invitado (Caja Rectangular) */
+.invitado-item {
+    background-color: #dbe4ee;
+    border: 1px solid var(--card-border, #C1C1C1); 
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px var(--shadow, rgba(0, 0, 0, 0.08));
+    margin: 5px;
+    font-family:"Raleway", sans-serif;
+    
+    /* Espaciado interno y color */
+    padding: 12px 20px;
+    color:  #054a91;
+    font-weight: 500;
+    
+    /* Dimensiones y espaciado externo */
+    width: 100%; /* La caja ocupa el ancho del .lista-invitados */
+    max-width: 350px; /* Aseguramos que no se exceda si el contenedor es más grande */
+    text-align: center; /* Centra el nombre dentro de su caja */
+    
+    /* Separación entre las cajas de invitados */
+    margin-bottom: 10px; 
+}
+
+.invitado-item:not(:last-child) {
+    border-bottom: 1px solid transparent; 
+}
+
+
+.titulo-ceremonia{
+font-family: "Cookie", cursive;
+  font-size: 50px;
+  color: #054a91;
+}
+
+.contenedor-columnas {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 40px; 
+  justify-content: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.columna {
+  flex: 1; 
+  min-width: 300px; 
+  text-align: center;
+  font-family:"Raleway", sans-serif;
+}
+
+.imagen-boda {
+  width: 100%;      
+  height: 250px;     
+  object-fit: cover; 
+  border-radius: 15px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.boton-confirmar, .boton-llegar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #054a91; 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+ 
+}
+
+.boton-confirmar:hover, .boton-llegar {
+  background-color: #dbe4ee;
+  color: #054a91;
+   border: 1px solid var(--card-border, #C1C1C1); 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px var(--shadow, rgba(0, 0, 0, 0.08));
+}
+
+/* Carusel */ 
+
+.seccion-galeria {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.texto-galeria h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.texto-galeria p {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* Tamaño del Carrusel */
+.swiper {
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  border-radius: 15px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* Color de las flechas y puntos */
+.swiper-button-next, .swiper-button-prev {
+  color: #054a91;
+}
+
+.swiper-pagination-bullet-active {
+  background: #054a91;
+}
