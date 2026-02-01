@@ -66,10 +66,22 @@ background: currentColor;
   border-radius: 3px;
 }
 
-.biblical-passage{
+/* Formatos*/
+
+.titulo-grupo, .title-fiesta, .title-count, .title-galery{
+  font-family:"Raleway", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.texto-invitacion, .mensaje-grupo, .texto-galeria, .text-fiesta, .text-regalo{
    font-family: "Raleway", sans-serif;
    font-size: 20px;
+   text-align: center;
 }
+
+
 
 /* Reloj cuenta regresiva */
 
@@ -93,7 +105,7 @@ background: currentColor;
     /* Define el tamaño del círculo (width y height deben ser iguales) */
     width: 60vw;
     height: 60vw;
-    max-width: 900px;  /* Limita el tamaño en pantallas grandes */
+    max-width: 900px;  
     max-height: 900px;
     
     /* Convierte el contenedor en un círculo */
@@ -115,80 +127,64 @@ background: currentColor;
 
 h2 {
     color: var(#054a91);
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     font-weight: 600;
     text-align: center;
 }
 
 /* Estilos del Reloj  */
 
-:root {
-    /* Tamaños de fuente predefinidos (en píxeles) */
-    --size-days: 38px;
-    --size-hours: 38px;
-    --size-minutes: 38px;
-    --size-seconds: 38px;
-
-    /* Colores solicitados */
-    --bg: #dbe4ee;
-    --fg: #054a91;
-    --card-bg: #ffffff; /* fondo de cada tarjeta */
-    --card-border: #cbd7e6;
-    --label-fg: #5c6b8c;
-    --shadow: rgba(0, 0, 0, 0.08);
-}
-
-* {
-    box-sizing: border-box;
-}
 .countdown {
+    position: relative; 
     display: flex;
-    gap: 1rem;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 620px; 
+    margin: 0 auto;
+}
+
+.img-fondo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.numeros-overlay {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    width: 70%; 
 }
 
 .time-group {
     display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    gap: 8px;
     justify-content: center;
-    margin-right: -35px;
 }
 
-/* Estilos de las Tarjetas  */
 .card {
-    background: #dbe4ee;
+    background: rgba(255, 255, 255, 0.8); 
     border: 1px solid var(--card-border);
-    border-radius: 50px;
-    padding: 0.6rem 0.8rem;
-    min-width: 80px;
+    border-radius: 15px;
+    padding: 10px;
+    min-width: 70px;
     text-align: center;
-    box-shadow: 0 2px 6px var(--shadow);
+    backdrop-filter: blur(5px); 
 }
-
 .card .value {
-    display: block;
-    color: var(--fg);
-    font-weight: 600;
-    font-size: var(--size-days);
+    font-size: 1.8rem;
+    line-height: 1;
 }
 
 .card .label {
-    display: block;
-    color: var(--label-fg);
-    font-size: 11px;
-    margin-top: 5px;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
+    font-size: 10px;
 }
-
-#days { font-size: var(--size-days); }
-#hours { font-size: var(--size-hours); }
-#minutes { font-size: var(--size-minutes); }
-#seconds { font-size: var(--size-seconds); }
-
 
 /* --- ESTILOS DEL CORAZÓN --- */
 .corazon {
@@ -245,10 +241,7 @@ h2 {
         transform: scale(1) rotate(-45deg);
     }
 }
-/* --- FIN ESTILOS DEL CORAZÓN AJUSTADOS --- */
 
-
-/* Opcional: ajustar responsive */
 @media (max-width: 600px) {
     :root {
         --size-days: 40px;
@@ -267,9 +260,12 @@ h2 {
 /* GRUPO DE INVITADOS  */
 
 .grupo-de-invitados {
-    text-align: center; 
-    padding: 20px 0; 
-    margin: 0 auto; 
+  background-color: #fff;
+  text-align: center; 
+  padding: 20px 0; 
+  margin: 0 auto; 
+  padding-top: 100px;
+  padding-bottom: 100px;
 
 }
 .pases-total{
@@ -278,7 +274,7 @@ h2 {
   border-radius: 50%; 
 
     background-color: #054a91;
-    color: #dbe4ee;
+    color: #fff;
   
     display: flex;
     justify-content: center; 
@@ -286,23 +282,16 @@ h2 {
 
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     /* Estilo del texto */
     font-size: 40px;
     font-weight: bold;
 }
-.titulo-grupo{
-  font-family:"Raleway", sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
 .lista-invitados {
     list-style: none;
     padding: 0;
-    margin: 20px auto; 
+    margin: 30px auto; 
     width: 100%;
     max-width: 350px; 
     
@@ -315,10 +304,9 @@ h2 {
 /* 2. Estilo de Cada Invitado (Caja Rectangular) */
 .invitado-item {
     background-color: #dbe4ee;
-    border: 1px solid var(--card-border, #C1C1C1); 
-    border-radius: 8px; /* Esquinas redondeadas */
-    box-shadow: 0 2px 5px var(--shadow, rgba(0, 0, 0, 0.08));
-    margin: 5px;
+    border: 1.5px solid  #C1C1C1; 
+    border-radius: 8px;
+    margin: 10px;
     font-family:"Raleway", sans-serif;
     
     /* Espaciado interno y color */
@@ -327,18 +315,14 @@ h2 {
     font-weight: 500;
     
     /* Dimensiones y espaciado externo */
-    width: 100%; /* La caja ocupa el ancho del .lista-invitados */
-    max-width: 350px; /* Aseguramos que no se exceda si el contenedor es más grande */
-    text-align: center; /* Centra el nombre dentro de su caja */
+    width: 100%; 
+    max-width: 350px; 
+    text-align: center; 
     
-    /* Separación entre las cajas de invitados */
-    margin-bottom: 10px; 
+    margin-bottom: 15px; 
 }
 
-.invitado-item:not(:last-child) {
-    border-bottom: 1px solid transparent; 
-}
-
+/*Ceremonia*/
 
 .titulo-ceremonia{
 font-family: "Cookie", cursive;
@@ -349,11 +333,17 @@ font-family: "Cookie", cursive;
 .contenedor-columnas {
   display: flex;
   flex-wrap: wrap; 
-  gap: 40px; 
+  gap: 30px; 
   justify-content: center;
-  padding: 20px;
-  max-width: 1000px;
+  padding: 40px 20px;
+  max-width: 1200px; 
   margin: 0 auto;
+}
+
+.columna img {
+  width: 80px; /* O el tamaño que prefieras para tus iconos */
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .columna {
@@ -396,41 +386,195 @@ font-family: "Cookie", cursive;
 .seccion-galeria {
   padding: 60px 20px;
   text-align: center;
-}
-
-.texto-galeria h2 {
-  font-family: "Raleway", sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #000;
-}
-
-.texto-galeria p {
-  max-width: 600px;
-  margin: 0 auto 40px auto;
-  color: #000;
-  line-height: 1.6;
+  background-color: #fff;
 }
 
 /* Tamaño del Carrusel */
 .swiper {
+  margin-top: 30px;
   width: 100%;
-  max-width: 900px;
-  height: 450px;
-  border-radius: 15px;
+  max-width: 90%;
+  height: 500px; 
+  padding-bottom: 50px; 
 }
 
 .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover; 
-}
-
-/* Color de las flechas y puntos */
-.swiper-button-next, .swiper-button-prev {
-  color: #054a91;
+  border: 10px solid rgba(0, 0, 0,0.1);
+  box-sizing: border-box;
 }
 
 .swiper-pagination-bullet-active {
+  bottom: 0px !important;
   background: #054a91;
+}
+
+/*Fiesta*/
+
+.seccion-fiesta {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #dbe4ee; 
+}
+
+.seccion-fiesta h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.seccion-fiesta p {
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/* Contenedor de las 3 tarjetas */
+.contenedor-tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap; 
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada Tarjeta */
+
+.tarjeta {
+  background: #fff;
+  border: 2px solid #C1C1C1; 
+  padding: 30px 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px); /* Efecto sutil al pasar el mouse */
+}
+
+.tarjeta-icono {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+  font-family: "Raleway", sans-serif;
+  color: #054a91;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.tarjeta p {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  min-height: 80px;
+}
+
+/* Botones de las tarjetas */
+.boton-tarjeta {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #054a91;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.boton-tarjeta:hover {
+  background-color: #03366a;
+}
+
+/* Regalos*/
+
+.seccion-regalos {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.seccion-regalos h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  color: #000;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.seccion-regalos p {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* Contenedor y estilo de la imagen */
+.contenedor-imagen-regalo {
+  margin-bottom: 40px;
+}
+
+.imagen-regalo {
+  width: 120px; /* Tamaño de la cajita */
+  height: auto;
+  /* Filtro suave opcional para que no sea un negro tan fuerte */
+  opacity: 0.8; 
+}
+
+/* Botón de Regalos */
+.boton-regalos {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #054a91;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.boton-regalos:hover {
+  background-color: #03366a;
+  transform: scale(1.05); /* Efecto de crecimiento suave */
+}
+
+/* Instagram*/
+
+.seccion-instagram {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Un gris muy tenue para diferenciarla de la de regalos */
+  border-top: 1px solid #C1C1C1; /* Una línea sutil para marcar el final */
+  background-color: #dbe4ee;
+}
+
+.seccion-instagram h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.seccion-instagram p {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.btn-instagram{
+  font-size: 40px;
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
 }
