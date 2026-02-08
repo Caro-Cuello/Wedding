@@ -1,0 +1,186 @@
+/* 1. Reset y Variables */
+:root {
+    --bg-page: #dbe4ee;
+    --bg-card: #f5f1e9;
+    --accent: #054a91;
+    --accent-hover: #043a72;
+    --text: #333; 
+    --placeholder: #a0a0a0;
+    --close-bg: #4a4a4a;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: var(--bg-page);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; 
+}
+
+/* 2. Contenedores */
+.container-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 420px; /* Limita el ancho total */
+    margin-top: 60px; 
+}
+
+.top-decoration {
+    position: absolute;
+    top: -140px; /* Ajustado para que no quede volando tan alto */
+    width: 100%;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+}
+
+.top-decoration img {
+    width: 110%; /* Un poco más grande para sobresalir elegantemente */
+    height: auto;
+}
+
+/* 3. La Tarjeta */
+.card {
+    background-color: var(--bg-card);
+    width: 100%;
+    padding: 50px 30px 40px;
+    border-radius: 45px;
+    box-shadow: 0 20px 40px var(--shadow);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--close-bg);
+    color: var(--white);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex; /* Mejor que line-height para centrar la X */
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: transform 0.2s, opacity 0.3s;
+}
+
+.close-btn:hover {
+    opacity: 0.9;
+    transform: rotate(90deg); /* Efecto visual sutil */
+}
+
+/* 4. Cabecera (Imagen circular) */
+.header-image {
+    width: 110px;
+    height: 110px;
+    background-color: var(--white);
+    border-radius: 50%;
+    margin: -105px auto 20px; /* Ajustado el margen superior */
+    border: 6px solid var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-image img {
+    width: 50%;
+    height: auto;
+    opacity: 0.8;
+}
+
+/* 5. Tipografía y Formulario */
+h2.titulo-cookie {
+    font-family: "Raleway", sans-serif;
+    color: var(--accent);
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 18px;
+    border-bottom: 1px solid #dcd7ce;
+    transition: border-color 0.3s;
+}
+
+.input-group:focus-within {
+    border-bottom-color: var(--accent); /* Se ilumina al escribir */
+}
+
+input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    color: var(--text);
+}
+
+input::placeholder {
+    color: var(--placeholder);
+    font-style: italic;
+}
+
+/* 6. Botón */
+.submit-btn {
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(5, 74, 145, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* 7. Mensaje de Éxito */
+#mensaje-exito {
+    margin-top: 20px;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
