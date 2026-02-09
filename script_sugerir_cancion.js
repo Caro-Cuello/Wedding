@@ -26,3 +26,4 @@ formulario.addEventListener('submit', function(e) {
         alert('Hubo un problema al enviar la sugerencia.');
     });
 });
+

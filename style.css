@@ -1,24 +1,30 @@
-body{
-    background-color: #dbe4ee;
+:root{
+   --background-color-light: #dbe4ee; 
+   --background-color-blue: #054a91; 
+   --accent-hover: #043a72;
+   --text: #000; 
+   --text-blue: #043a72; 
+   --white: #fff;
+   --fuente-principal: "Raleway", sans-serif;
+   --fuente-cursiva: "Cookie", cursive;
+
+} 
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
 }
 
-.cookie-regular {
-  font-family: "Cookie", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
 
-.raleway-uniquifier{
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
+/* PORTADA*/
+.container-portada{
+background-color: var(--background-color-light);
 
+}
 .container-date, .container-name {
-    font-family: "Cookie", cursive;
-  display: flex; 
-  justify-content: center;
+font-family: var(--fuente-cursiva);
+display: flex; 
+justify-content: center;
 margin-top: 10px;
   
 }
@@ -26,7 +32,7 @@ margin-top: 10px;
   display: inline-block;
   position: relative;
   padding: 0 140px;
-  color: #054a91;
+  color: var(--text-blue);
 }
 .decorative-lines::before,
 .decorative-lines::after {
@@ -41,13 +47,8 @@ margin-top: 10px;
 .decorative-lines::before { left: 0; }
 .decorative-lines::after  { right: 0; }
 
-
-.name{
-    color: #054a91;
-    
-}
-
 .name {
+  color: var(--text-blue);
   text-align: center;
   position: relative;
   display: inline-block;
@@ -60,75 +61,71 @@ margin-top: 10px;
   width: 100%;
   height: 1px;
   margin: 2px auto 0;
-background: currentColor;
+  background: currentColor;
   transform: translateY(-50%);
   border-radius: 3px;
 }
 
-/* Formatos*/
+.texto-portada{
+  color: var(--text);
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: -5px;
+  text-align: center;
 
-.titulo-grupo, .title-fiesta, .title-count, .title-galery{
+}
+
+/* Formatos VER DESPUÉS QUE ERA ESTO !!!!!!!!!!!!!!!!!!!!!*/
+
+.titulo-grupo, .title-fiesta, .title-galery{
   font-family:"Raleway", sans-serif;
     font-size: 40px;
     font-weight: bold;
     margin-top: 20px;
 }
 
-.texto-invitacion, .mensaje-grupo, .texto-galeria, .text-fiesta, .text-regalo{
+.mensaje-grupo, .texto-galeria, .text-fiesta, .text-regalo{
    font-family: "Raleway", sans-serif;
    font-size: 20px;
    text-align: center;
 }
 
-
-
 /* Reloj cuenta regresiva */
 
 .container-count {
-
     display: flex;
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
-    
-    /* Ajustamos el padding para que el contenido no toque los bordes */
-    padding: 3rem 1rem; 
     font-family: "Raleway", sans-serif;
-    
-    /* Limpiamos bordes y sombras duplicadas */
     border-radius: 0; 
     box-shadow: none; 
+    background-color: var(--background-color-light);
+    margin-top: 5px; 
+    padding-top: 5px;
+}
+
+.title-count{
+margin-top: 35px;
+font-family: var(--fuente-principal);
+font-size: 35px;
+color: var(--text-blue);
+font-size: bold;
 }
 
 .circle-wrapper {
-    /* Define el tamaño del círculo (width y height deben ser iguales) */
-    width: 60vw;
-    height: 60vw;
+    width: 80vw;
+    height: 80vw;
     max-width: 900px;  
     max-height: 900px;
-    
-    /* Convierte el contenedor en un círculo */
     border-radius: 50%;
-    
-    /* Propiedades visuales del círculo */
-    background: #f0f0f0; /* Fondo del círculo */
-    border: 5px solid #054a91; /* Borde visible del círculo */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    
-    /* Centrar el círculo en la página */
+    background: var(--background-color-light); 
+    border: 5px solid var(--background-color-blue);
+    box-shadow: 0 0 20px rgba(var(--text-rgb), 0.8);
     margin: 50px auto; 
-    
-    /* Usar Flexbox para centrar el .container-count dentro del círculo */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-h2 {
-    color: var(#054a91);
-    margin-bottom: 10px;
-    font-weight: 600;
-    text-align: center;
 }
 
 /* Estilos del Reloj  */
@@ -143,10 +140,10 @@ h2 {
     margin: 0 auto;
 }
 
-.img-fondo {
-    width: 100%;
-    height: auto;
-    display: block;
+.imagen-fondo-contador{
+  width: 400px;
+  height: auto;
+  display: block;
 }
 
 .numeros-overlay {
@@ -168,8 +165,8 @@ h2 {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.8); 
-    border: 1px solid var(--card-border);
+    background: (var(--background-color-light)); 
+    border: 1px solid black 0.8;
     border-radius: 15px;
     padding: 10px;
     min-width: 70px;
@@ -187,16 +184,17 @@ h2 {
 
 /* --- ESTILOS DEL CORAZÓN --- */
 .corazon {
-    
-    margin-top: 2rem; 
-    margin-bottom: 2rem; 
+    margin-top: 5px; 
+    margin-bottom: 1rem; 
     
     animation: latido 1s infinite;
-    background-color:#054a91;
-    display: inline-block; /* Importante para que el margen funcione bien */
+    background-color: #054a91;
+    display: inline-block;
     height: 24px;
-    transform: rotate(-45deg);
     width: 24px;
+    
+    /* Quitamos el position relative y el top que bloqueaban la animación */
+    transform: rotate(-45deg);
 }
 
 .corazon:before,
@@ -206,7 +204,7 @@ h2 {
     border-radius: 50%;
     height: 24px;
     width: 24px;
-    position: absolute; /* Estos sí necesitan position: absolute respecto a .corazon */
+    position: absolute;
 }
 
 .corazon:before {
@@ -229,7 +227,6 @@ h2 {
     40% {
         transform: scale(1.5) rotate(-45deg);
     }
-    /* Añadimos un paso de regreso para un latido más natural */
     60% {
         transform: scale(1.25) rotate(-45deg);
     }
@@ -241,25 +238,11 @@ h2 {
     }
 }
 
-@media (max-width: 600px) {
-    :root {
-        --size-days: 40px;
-        --size-hours: 34px;
-        --size-minutes: 28px;
-        --size-seconds: 24px;
-    }
-    
-    .days-card {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 
 /* GRUPO DE INVITADOS  */
 
 .grupo-de-invitados {
-  background-color: #fff;
+  background-color: (var(--white));
   text-align: center; 
   padding: 20px 0; 
   margin: 0 auto; 
@@ -272,8 +255,8 @@ h2 {
   height:90px;
   border-radius: 50%; 
 
-    background-color: #054a91;
-    color: #fff;
+    background-color: (var(--background-color-blue));
+    color: (var(--white));
   
     display: flex;
     justify-content: center; 
@@ -490,7 +473,10 @@ font-family: "Cookie", cursive;
 }
 
 .boton-tarjeta:hover {
-  background-color: #03366a;
+    background-color: var(--accent-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(5, 74, 145, 0.3);
 }
 
 /* Regalos*/

@@ -17,9 +17,11 @@
 
 <body>
 
-    <div class="container portada">
+    <div class="container-portada">
 
-        <img src="./images/flowers.png" alt="flowers" width="550px" class="img-fluid rounded mx-auto d-block">
+      <div class="imagen-portada">
+
+        <img src="./images/flowers.png" alt="flowers" width="500px" class="img-fluid rounded mx-auto d-block">
     </div>
 
     <div class="container-date">
@@ -28,27 +30,26 @@
     </div>
 
     <div class="container-name">
-        <h1 class="name text-center display-1">Carolina & Cristian</h1>
+        <h1 class="name text-center display-1">Cristian & Carolina</h1>
     </div>
 
     <!--Texto-->
 
- <figure class="texto-invitacion mt-2">
-    <p>"Un día muy especial en nuestras vidas que queremos compartir con ustedes".
+ <p class="texto-portada">
+    Un día muy especial en nuestras vidas que queremos compartir con ustedes.
 </p>
- 
-</figure>
+
+</div>
 
 <!--Reloj Cuenta Regresiva-->
 
 <div class="container-count">
 
-  <h2 class="title-count">Faltan ...</h2>
-
     <div id="countdown" class="countdown">
-    <img src="./images/blue_flowers_and_golden_mark.png" alt="Circulo de Flores" class="Iamgen Fondo de Reloj Contador">
-    
+    <img src="./images/blue_flowers_and_golden_mark.png" alt="Circulo de Flores" class="imagen-fondo-contador">
+
     <div class="numeros-overlay">
+          <h3 class="title-count">Falta</h3>
         <div class="card days-card">
             <span class="value" id="days">0</span>
             <span class="label">Días</span>
@@ -69,7 +70,7 @@
         </div>
     </div>
 </div>
-    <div class="corazon mt-1"></div>
+    <div class="corazon"></div>
 </div>
 
 <!--Invitados-->
@@ -176,26 +177,28 @@
       disfrutar y compartir momentos mágicos con nosotros.
     </p>
 
+    <!--Fiesta-->
+
     <div class="contenedor-tarjetas">
       <div class="tarjeta">
         <img src="./images/nota-musical.png" alt="Música" class="icon-fiesta mt-4 mb-5">
         <h3 class="fw-bold">Música</h3>
         <p>¿Cuál es la canción que no puede faltar en la pista?</p>
-        <a href="/sugerir_cancion.html" class="boton-tarjeta mb-5">Sugerir Canción</a>
+        <a href="./sugerir_cancion.html" class="boton-tarjeta mb-5">Sugerir Canción</a>
       </div>
 
       <div class="tarjeta">
         <img src="./images/código-de-vestimenta.png" alt="código de vestimenta" class="icon-fiesta mt-4 mb-5">
         <h3 class="fw-bold">Dress Code</h3>
-        <p>La etiqueta es elegante o elegante sport.</p>
-        <a href="#" class="boton-tarjeta mb-5">Ver Detalles</a>
+        <p>Código de vestimenta.</p>
+        <a href="./codigo_vestimenta.html" class="boton-tarjeta mb-5">Ver Detalles</a>
       </div>
 
       <div class="tarjeta">
         <img src="./images/notas-tips.png" alt="Tips Notas" class="icon-fiesta mt-4 mb-5">
-        <h3 class="fw-bold">Tips / Notas</h3>
-        <p>Información adicional importante.</p>
-        <a href="#" class="boton-tarjeta mb-5">+ Info</a>
+        <h3 class="fw-bold">Menú Especial</h3>
+        <p>Restricciones alimenticias.</p>
+        <a href="./menu.html" class="boton-tarjeta mb-5">+ Info</a>
       </div>
     </div>
   </div>
@@ -215,7 +218,7 @@
       <img src="./images/regalo.png" alt="Icono Regalo" class="imagen-regalo mt-3 mb-3">
     </div>
 
-    <a href="#" class="boton-regalos">Ver más</a>
+    <a href="./regalos.html" class="boton-regalos">Ver más</a>
   </div>
 </section>
 
