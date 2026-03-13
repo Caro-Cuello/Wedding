@@ -1,24 +1,28 @@
 :root{
-   --background-color-light: #dbe4ee; 
-   --background-color-blue: #054a91; 
+   --background-color-light-blue: #dbe4ee; 
+   --background-color-gold:#FAF8F0;
+   --color-blue: #0A2551; 
+   --color-secundary: #A7B5C4; 
    --accent-hover: #043a72;
+   --color-accent: #054a91;
    --text: #000; 
-   --text-blue: #043a72; 
+   --text-blue: #0A2551; 
    --white: #fff;
    --fuente-principal: "Raleway", sans-serif;
    --fuente-cursiva: "Cookie", cursive;
+  
 
 } 
+
 * {
     box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
 
-
 /* PORTADA*/
 .container-portada{
-background-color: var(--background-color-light);
+background-color: var(--background-color-light-blue);
 
 }
 .container-date, .container-name {
@@ -26,7 +30,6 @@ font-family: var(--fuente-cursiva);
 display: flex; 
 justify-content: center;
 margin-top: 10px;
-  
 }
 .decorative-lines {
   display: inline-block;
@@ -67,8 +70,8 @@ margin-top: 10px;
 }
 
 .texto-portada{
-  color: var(--text);
-  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
   margin-top: 5px;
   margin-bottom: -5px;
   text-align: center;
@@ -84,7 +87,7 @@ margin-top: 10px;
     margin-top: 20px;
 }
 
-.mensaje-grupo, .texto-galeria, .text-fiesta, .text-regalo{
+.mensaje-grupo, .texto-galeria, .text-fiesta, .text-regalo, .text-portada{
    font-family: "Raleway", sans-serif;
    font-size: 20px;
    text-align: center;
@@ -100,7 +103,7 @@ margin-top: 10px;
     font-family: "Raleway", sans-serif;
     border-radius: 0; 
     box-shadow: none; 
-    background-color: var(--background-color-light);
+    background-color: var(--background-color-light-blue);
     margin-top: 5px; 
     padding-top: 5px;
 }
@@ -119,7 +122,7 @@ font-size: bold;
     max-width: 900px;  
     max-height: 900px;
     border-radius: 50%;
-    background: var(--background-color-light); 
+    background: var(--background-color-light-blue); 
     border: 5px solid var(--background-color-blue);
     box-shadow: 0 0 20px rgba(var(--text-rgb), 0.8);
     margin: 50px auto; 
@@ -165,7 +168,7 @@ font-size: bold;
 }
 
 .card {
-    background: (var(--background-color-light)); 
+    background: (var(--background-color-light-blue)); 
     border: 1px solid black 0.8;
     border-radius: 15px;
     padding: 10px;
@@ -188,7 +191,7 @@ font-size: bold;
     margin-bottom: 1rem; 
     
     animation: latido 1s infinite;
-    background-color: #054a91;
+    background-color: var(--color-blue);
     display: inline-block;
     height: 24px;
     width: 24px;
@@ -200,7 +203,7 @@ font-size: bold;
 .corazon:before,
 .corazon:after {
     content: "";
-    background-color: #054a91;
+    background-color: var(--color-blue);
     border-radius: 50%;
     height: 24px;
     width: 24px;
@@ -242,7 +245,7 @@ font-size: bold;
 /* GRUPO DE INVITADOS  */
 
 .grupo-de-invitados {
-  background-color: (var(--white));
+  background-color: (var(--background-color-gold));
   text-align: center; 
   padding: 20px 0; 
   margin: 0 auto; 
@@ -251,22 +254,17 @@ font-size: bold;
 
 }
 .pases-total{
-  width: 90px; 
-  height:90px;
-  border-radius: 50%; 
-
-    background-color: (var(--background-color-blue));
-    color: (var(--white));
-  
+    width: 90px; 
+    height:90px;
+    border-radius: 50%; 
+    background-color: var(--color-blue);
+    color: var(--white);
     display: flex;
     justify-content: center; 
     align-items: center; 
-
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
-
-    /* Estilo del texto */
     font-size: 40px;
     font-weight: bold;
 }
@@ -276,40 +274,47 @@ font-size: bold;
     margin: 30px auto; 
     width: 100%;
     max-width: 350px; 
-    
-    /* Usamos Flexbox para centrar las cajas internamente si no ocupan todo el ancho */
     display: flex;
     flex-direction: column;
     align-items: center; 
 }
-
-/* 2. Estilo de Cada Invitado (Caja Rectangular) */
 .invitado-item {
     background-color: #dbe4ee;
     border: 1.5px solid  #C1C1C1; 
     border-radius: 8px;
     margin: 10px;
     font-family:"Raleway", sans-serif;
-    
-    /* Espaciado interno y color */
     padding: 12px 20px;
-    color:  #054a91;
+    color: var(--color-blue);
     font-weight: 500;
-    
-    /* Dimensiones y espaciado externo */
     width: 100%; 
     max-width: 350px; 
     text-align: center; 
-    
     margin-bottom: 15px; 
 }
 
 /*Ceremonia*/
 
+.seccion-ceremonias{
+  background-color: var(--background-color-light-blue);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.tarjeta {
+  background-color: #ffffff; 
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 300px;
+}
+
 .titulo-ceremonia{
 font-family: "Cookie", cursive;
-  font-size: 50px;
-  color: #054a91;
+  font-size: 55px;
+  color: var(--color-blue);
+  margin-top: 20px;
 }
 
 .contenedor-columnas {
@@ -320,10 +325,11 @@ font-family: "Cookie", cursive;
   padding: 40px 20px;
   max-width: 1200px; 
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .columna img {
-  width: 80px; /* O el tamaño que prefieras para tus iconos */
+  width: 80px; 
   height: auto;
   margin-bottom: 15px;
 }
@@ -344,20 +350,20 @@ font-family: "Cookie", cursive;
   display: block;
 }
 
-.boton-confirmar, .boton-llegar {
+.boton-confirmar, .boton-llegar, .boton-tarjeta, .boton-regalos{
   display: inline-block;
   margin-top: 20px;
   padding: 10px 25px;
-  background-color: #054a91; 
+  background-color: var(--color-blue); 
   color: white;
   text-decoration: none;
   border-radius: 5px;
  
 }
 
-.boton-confirmar:hover, .boton-llegar {
+.boton-confirmar:hover, .boton-llegar:hover, .boton-tarjeta:hover, .boton-regalos:hover {
   background-color: #dbe4ee;
-  color: #054a91;
+  color: var(--color-blue);
    border: 1px solid var(--card-border, #C1C1C1); 
     border-radius: 8px; 
     box-shadow: 0 2px 5px var(--shadow, rgba(0, 0, 0, 0.08));
@@ -425,6 +431,11 @@ font-family: "Cookie", cursive;
 
 /* Estilo de cada Tarjeta */
 
+.contenedor-tarjeta{
+  margin-top: 40px;
+  margin-top: 40px;
+}
+
 .tarjeta {
   background: #fff;
   border: 2px solid #C1C1C1; 
@@ -447,7 +458,7 @@ font-family: "Cookie", cursive;
 
 .tarjeta h3 {
   font-family: "Raleway", sans-serif;
-  color: #054a91;
+  color: var(--color-blue);
   margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -457,26 +468,6 @@ font-family: "Cookie", cursive;
   font-size: 0.95rem;
   margin-bottom: 25px;
   min-height: 80px;
-}
-
-/* Botones de las tarjetas */
-.boton-tarjeta {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #054a91;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 0.8rem;
-}
-
-.boton-tarjeta:hover {
-    background-color: var(--accent-hover);
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(5, 74, 145, 0.3);
 }
 
 /* Regalos*/
@@ -515,22 +506,6 @@ font-family: "Cookie", cursive;
   opacity: 0.8; 
 }
 
-/* Botón de Regalos */
-.boton-regalos {
-  display: inline-block;
-  padding: 15px 40px;
-  background-color: #054a91;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.boton-regalos:hover {
-  background-color: #03366a;
-  transform: scale(1.05); /* Efecto de crecimiento suave */
-}
 
 /* Instagram*/
 

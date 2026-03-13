@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Confirmación de Asistencia</title>
+    <link rel="icon" href="./images/favicon_novios.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style_sugerir_cancion.css">
+</head>
+<body>
+
+    <div class="container-wrapper">
+        <div class="top-decoration">
+            <img src="./images/flowers-musica.png" alt="Decoración superior">
+        </div>
+
+        <div class="card">
+            <a href="/index.html" class="close-btn">✕</a>
+            
+            <div id="contenido-principal">
+                <div class="header-image">
+                    <img src="./images/lista-de-invitados.png" alt="Icono Asistencia">
+                </div>
+
+                <h2 class="titulo-cookie">Confirmar Asistencia</h2>
+        
+                <div class="divisor mx-auto mb-4" style="width: 50px; height: 2px; background-color: var(--accent);"></div>
+
+
+    <form id="form-asistencia" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeojv27BejiK83FmKH1KGW0dPnOBuuXCVCd1f9OiD2JttIHcg/formResponse" method="POST">
+                    
+    <div class="input-group mb-3">
+        <input type="text" name="entry.1974646852" placeholder="Nombre y Apellido" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <select name="entry.1367791065" class="form-select border-0 bg-transparent text-center" style="box-shadow: none; color: var(--text);" required>
+            <option value="" disabled selected>¿Asistirán todas las personas invitadas?</option>
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+<br>
+    <div class="input-group mb-4">
+        <input type="text" name="entry.1578373329" placeholder="Escriba número total de asistentes">
+    </div>
+
+    <button type="submit" class="submit-btn border-0 w-100">
+        CONFIRMAR
+    </button>
+</form>
+
+                <div class="nota-importante mt-4">
+                    <p class="" style="font-style: bold; color: #000">
+                        * Por favor, responde antes del 31/10/2026 *
+                    </p>
+                </div>
+            </div>
+
+            <div id="mensaje-exito" style="display:none; padding: 40px 0; text-align: center;">
+                 <div class="header-image">
+                    <img src="./images/lista-de-invitados-confirmacion.png" alt="Icono Asistencia">
+                </div>
+                <p style="color: var(--accent); font-weight: normal; line-height: 1.8;">
+                    Tu respuesta ha sido registrada. 
+                    <br>Muchas gracias por acompañarnos en este día tan especial.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script_asistencia.js"></script>
+</body>
+</html>
