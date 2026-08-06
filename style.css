@@ -10,8 +10,6 @@
    --white: #fff;
    --fuente-principal: "Raleway", sans-serif;
    --fuente-cursiva: "Cookie", cursive;
-  
-
 } 
 
 * {
@@ -31,6 +29,7 @@ display: flex;
 justify-content: center;
 margin-top: 10px;
 }
+
 .decorative-lines {
   display: inline-block;
   position: relative;
@@ -80,9 +79,10 @@ margin-top: 10px;
 
 /* Formatos VER DESPUÉS QUE ERA ESTO !!!!!!!!!!!!!!!!!!!!!*/
 
-.titulo-grupo, .title-fiesta, .title-galery{
-  font-family:"Raleway", sans-serif;
-    font-size: 40px;
+.titulo-grupo, .title-fiesta, .title-galery, .instagram-tittle{
+  font-family:var(--fuente-principal);
+  color: #000;
+    font-size: 37px;
     font-weight: bold;
     margin-top: 20px;
 }
@@ -91,7 +91,10 @@ margin-top: 10px;
    font-family: "Raleway", sans-serif;
    font-size: 20px;
    text-align: center;
+   color: rgba(var(--text-rgb), 0.7)
 }
+
+
 
 /* Reloj cuenta regresiva */
 
@@ -358,6 +361,9 @@ font-family: "Cookie", cursive;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  border: 1px solid transparent; 
+    outline: none;
+    transition: all 0.3s ease; 
  
 }
 
@@ -509,11 +515,12 @@ font-family: "Cookie", cursive;
 
 /* Instagram*/
 
+
 .seccion-instagram {
   padding: 100px 20px;
   text-align: center;
-  background-color: #f9f9f9; /* Un gris muy tenue para diferenciarla de la de regalos */
-  border-top: 1px solid #C1C1C1; /* Una línea sutil para marcar el final */
+  background-color: #f9f9f9; 
+  border-top: 1px solid #C1C1C1; 
   background-color: #dbe4ee;
 }
 
@@ -538,3 +545,90 @@ font-family: "Cookie", cursive;
   margin-bottom: 50px;
 
 }
+
+/* --- AJUSTES PARA TABLETS Y MÓVILES (Menos de 992px) --- */
+@media (max-width: 992px) {
+
+  .decorative-lines{
+  padding: 0 100px;
+  }
+
+.decorative-lines::before,
+.decorative-lines::after {
+   width: 60px;
+
+}
+.contenedor-tarjetas {
+    flex-direction: column;
+    align-items: center;
+}
+    .tarjeta {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. Portada: reducimos el espacio y la imagen de flores */
+    .container-portada {
+      padding: 0px 15px 0px 15px;
+    }
+    
+    .imagen-portada img {
+        width: 75%; /* Las flores no ocupan todo el ancho */
+    }
+
+    .decorative-lines {
+        padding: 0 60px; 
+
+    }
+.decorative-lines::before,
+.decorative-lines::after {
+   width: 45px;
+
+}
+    .name {
+        font-size: 2.8rem !important;
+  
+    }
+
+    /* 2. Contador: lo hacemos más pequeño para que no se corte */
+    .countdown {
+        max-width: 320px;
+    }
+    
+    .card {
+        min-width: 55px;
+        padding: 5px;
+    }
+    
+    .card .value {
+        font-size: 1.2rem;
+    }
+
+    /* 3. Secciones: menos espacio vertical */
+    section {
+        padding: 40px 15px;
+    }
+
+    /* 4. Invitados: las cajas de nombres al 90% del ancho */
+    .invitado-item {
+        width: 90%;
+        min-width: unset;
+    }
+    
+    .pases-total {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    /* 5. Imágenes de galería */
+    .swiper {
+        height: 350px;
+    }
+  .swiper-slide img {
+  width: 65%;
+  }
+}
+
