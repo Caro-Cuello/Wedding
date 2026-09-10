@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Sugerir Canción</title>
+    <link rel="icon" href="./images/notas-musicales.png" type="image/png">
+    <link rel="stylesheet" href="style_sugerir_cancion.css">
+</head>
+<body>
+
+    <div class="container-wrapper">
+        
+        <div class="top-decoration">
+            <img src="./images/flowers-musica.png" alt="Decoración superior">
+        </div>
+
+        <div class="card">
+            <a href="javascript:history.back()" class="close-btn">✕</a>
+            
+            <div class="header-image">
+                <img src="./images/notas-musicales.png" alt="Icono Música">
+            </div>
+
+            <h2 class="titulo-cookie">Sugerir Canción</h2>
+
+            <form id="form-musica" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScxYCyb0jHHcNJylFECBATPexraWhy6BQQu3thKIPYzbTyX3g/formResponse" method="POST">
+                
+                <div class="input-group">
+                    <input type="text" name="entry.1650442230" placeholder="Tu nombre" required autocomplete="off">
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="entry.1806252701" placeholder="Nombre de canción y artista" required autocomplete="off">
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="entry.1630903533" placeholder="Link de YouTube o Spotify" required autocomplete="off">
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Sugerir canción
+                </button>
+            </form>
+
+            <div id="mensaje-exito" style="display:none; margin-top: 20px;">
+                <p style="color: #054a91; font-weight: bold; font-size: 1.2rem;">
+                    ¡Sugerencia enviada con éxito! 🎵
+                </p>
+            </div>
+
+        </div> </div>
+
+
+    <script src="/script_sugerir_cancion.js"></script>
+
+</body>
+</html>
